@@ -85,7 +85,7 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt install nvidia-driver-390
 sudo reboot
 ```
-___Note: You will be prompted to provide a password, provide the password, but we will not use it. The purpose of this password is out of scope for this demo.__
+__Note: You will be prompted to provide a password, provide the password, but we will not use it. The purpose of this password is out of scope for this demo.__
 
 8. Recieve Stackdriver Alert
 
