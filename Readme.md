@@ -114,4 +114,4 @@ NotificationChannel: googleapi: Error 400: 'projects/{{your-project-name}}' is n
 
 __Solution:__ 
 
-The project you put in the `stackdriver_project` variable is not a stackdriver workspace
+The project id you put in the `stackdriver_project` variable is not a [Stackdriver Workspace](https://cloud.google.com/monitoring/workspaces/)
