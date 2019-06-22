@@ -60,7 +60,7 @@ resource "google_compute_instance" "shielded_vm_instance" {
 resource "google_compute_firewall" "shielded_vm" {
   provider = google-beta
   name     = "${local.name}-firewall"
-  network  = "${google_compute_network.shielded_vm_network.name}"
+  network  = google_compute_network.shielded_vm_network.name
 
   allow {
     protocol = "tcp"
