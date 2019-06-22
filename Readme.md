@@ -104,14 +104,14 @@ Within a few minutes, you should see the alert appear within the Stackdriver Wor
 ![stackdriver_UI_alert](./IMG/Stackdriver_UI_alert.png)
 
 
-#FAQ
+## FAQ
 
-Problem: I recieve the following Error Message
+__Problem:__ I recieve the following Error Message
 
 ```
 NotificationChannel: googleapi: Error 400: 'projects/{{your-project-name}}' is not a Stackdriver workspace.
 ```
 
-Solution: 
+__Solution:__ 
 
 The project you put in the `stackdriver_project` variable is not a stackdriver workspace
