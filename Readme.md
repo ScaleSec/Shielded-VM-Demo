@@ -10,10 +10,14 @@ The Terraform module is used to demonstrate the concepts discussed in [Article](
 * [gcloud sdk](https://cloud.google.com/sdk/install)
 
 The user running terraform must have the following permissions:
-* Network Admin
-* Monitoring Admin
+
+On the project which will host the shielded VM instances:
+
 * Compute Admin
-* Logging Administrator
+
+On Stackdriver Workspace Host Project
+
+* Monitoring Admin
 
 ## Inputs
 
