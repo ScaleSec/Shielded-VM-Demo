@@ -12,7 +12,30 @@ The Terraform module is used to demonstrate the concepts discussed in [Article](
 The user running terraform must have the following permissions:
 * Compute Admin
 * Logging Administrator
-* 
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| project_id |The ID of the project where the pub/sub topic will be installed  | string | - | yes |
+| notification_email_address | The Email Address which should recieve notifications for Shielded VM Failures | string | - | yes |
+| stackdriver_project | The Project ID of the Stackdriver Workspace which to deploy the Stackdriver Alerts | string | - | yes |
+| ssh_cidr_range | The CIDR block to allow SSH access to the Shielded VM instance | string | - |  yes |
+| region | The Region to deploy resources into| string |`us-east1` | no |
+| shielded_vm_image | The VM Image to deploy.  Image must be compatible with shielded VM| string |`gce-uefi-images/ubuntu-1804-lts` | no |
+| subnet_cidr_range | The IPV4 Range for the Network  | string  | `"192.168.1.0/24"`| no | 
+| zone  | The Zone which to deploy the VM into.  Zone must be within the selected region | string  | `us-east1-b` | no |
+| enable_secure_boot | Enables Secure Boot feature in Shielded VM | boolean | true | no |
+| enable_vtpm | Enable Virtual TPM feature in Shielded VM | boolean | true | no |
+| enable_integrity_monitoring | Enable Integrity Monitoring feature in Shielded VM | boolean | true | no |
+
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| shielded_vm_instance_name    | The name of the Shielded VM instance |
+
 
 ## Usage
 
@@ -79,30 +102,6 @@ You should see a similar log within your projects stackdriver logging
 Within a few minutes, you should see the alert appear within the Stackdriver Workspace UI
 
 ![stackdriver_UI_alert](./IMG/Stackdriver_UI_alert.png)
-
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| project_id |The ID of the project where the pub/sub topic will be installed  | string | - | yes |
-| notification_email_address | The Email Address which should recieve notifications for Shielded VM Failures | string | - | yes |
-| stackdriver_project | The Project ID of the Stackdriver Workspace which to deploy the Stackdriver Alerts | string | - | yes |
-| ssh_cidr_range | The CIDR block to allow SSH access to the Shielded VM instance | string | - |  yes |
-| region | The Region to deploy resources into| string |`us-east1` | no |
-| shielded_vm_image | The VM Image to deploy.  Image must be compatible with shielded VM| string |`gce-uefi-images/ubuntu-1804-lts` | no |
-| subnet_cidr_range | The IPV4 Range for the Network  | string  | `"192.168.1.0/24"`| no | 
-| zone  | The Zone which to deploy the VM into.  Zone must be within the selected region | string  | `us-east1-b` | no |
-| enable_secure_boot | Enables Secure Boot feature in Shielded VM | boolean | true | no |
-| enable_vtpm | Enable Virtual TPM feature in Shielded VM | boolean | true | no |
-| enable_integrity_monitoring | Enable Integrity Monitoring feature in Shielded VM | boolean | true | no |
-
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| shielded_vm_instance_name    | The name of the Shielded VM instance |
 
 
 #FAQ
