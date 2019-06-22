@@ -78,7 +78,7 @@ You should see a similar log within your projects stackdriver logging
 
 Within a few minutes, you should see the alert appear within the Stackdriver Workspace UI
 
-![stackdriver_UI_alert](./IMG/stackdriver_UI_alert.png)
+![stackdriver_UI_alert](./IMG/Stackdriver_UI_alert.png)
 
 
 ## Inputs
