@@ -17,8 +17,8 @@ The user running terraform must have the following permissions:
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| project_id |The ID of the project where the pub/sub topic will be installed  | string | - | yes |
-| notification_email_address | The Email Address which should recieve notifications for Shielded VM Failures | string | - | yes |
+| project_id |The Project ID where the instance should be deployed to | string | - | yes |
+| notification_email_address | The Email Address to recieve notifications for Shielded VM Failures | string | - | yes |
 | stackdriver_project | The Project ID of the Stackdriver Workspace which to deploy the Stackdriver Alerts | string | - | yes |
 | ssh_cidr_range | The CIDR block to allow SSH access to the Shielded VM instance | string | - |  yes |
 | region | The Region to deploy resources into| string |`us-east1` | no |
