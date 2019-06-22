@@ -67,7 +67,7 @@ resource "google_compute_firewall" "shielded_vm" {
     ports    = ["22"]
   }
 
-  source_ranges = ["97.106.112.101"]
+  source_ranges = [var.ssh_cidr_range]
 }
 
 resource "google_monitoring_alert_policy" "shielded_vm_alert_policy" {

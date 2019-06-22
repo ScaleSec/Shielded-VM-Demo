@@ -13,6 +13,10 @@ variable "stackdriver_project" {
   description = "The Project ID of the Stackdriver Workspace which to deploy the Stackdriver Alerts.  If you stackdriver workspace is in the same project as your resources, set this variable equal to the project_id"
 }
 
+variable "ssh_cidr_range" {
+  description = "The CIDR Block to allow SSH access for the Shielded VM instance "
+}
+
 ####################
 # Optional Variables
 ####################
@@ -51,4 +55,3 @@ variable "enable_integrity_monitoring" {
   description = "Enable Integrity Monitoring feature in Shielded VM?"
   default     = true
 }
-
