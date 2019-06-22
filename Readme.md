@@ -25,9 +25,9 @@ The user running terraform must have the following permissions:
 | shielded_vm_image | The VM Image to deploy.  Image must be compatible with shielded VM| string |`gce-uefi-images/ubuntu-1804-lts` | no |
 | subnet_cidr_range | The IPV4 Range for the Network  | string  | `"192.168.1.0/24"`| no | 
 | zone  | The Zone which to deploy the VM into.  Zone must be within the selected region | string  | `us-east1-b` | no |
-| enable_secure_boot | Enables Secure Boot feature in Shielded VM | boolean | true | no |
-| enable_vtpm | Enable Virtual TPM feature in Shielded VM | boolean | true | no |
-| enable_integrity_monitoring | Enable Integrity Monitoring feature in Shielded VM | boolean | true | no |
+| enable_secure_boot | Enables Secure Boot feature in Shielded VM | boolean | `true` | no |
+| enable_vtpm | Enable Virtual TPM feature in Shielded VM | boolean | `true` | no |
+| enable_integrity_monitoring | Enable Integrity Monitoring feature in Shielded VM | boolean | `true` | no |
 
 
 ## Outputs
