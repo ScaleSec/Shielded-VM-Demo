@@ -109,6 +109,11 @@ Within a few minutes, you should see the alert appear within the Stackdriver Wor
 
 ![stackdriver_UI_alert](./IMG/Stackdriver_UI_alert.png)
 
+9. Destroy resources
+
+```
+terraform destroy
+```
 
 ## FAQ
 
